@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* Light background */
+    --foreground: 222.2 84% 4.9%; /* Dark text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 207 68% 53%; /* Blue */
+    --primary-foreground: 0 0% 98%; /* Light text on blue */
+
+    --secondary: 204 16% 93%; /* Light Gray */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Darker text on light gray */
+
+    --muted: 204 16% 93%; /* Light Gray */
+    --muted-foreground: 222.2 47.4% 11.2%; /* Darker text */
+
+    --accent: 145 63% 49%; /* Green */
+    --accent-foreground: 0 0% 98%; /* Light text on green */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 204 16% 88%; /* Slightly darker gray border */
+    --input: 204 16% 88%; /* Slightly darker gray input border */
+    --ring: 207 68% 53%; /* Blue focus ring */
+
+    --chart-1: 207 68% 53%; /* Blue */
+    --chart-2: 145 63% 49%; /* Green */
+    --chart-3: 43 74% 66%;
+    --chart-4: 27 87% 67%;
+    --chart-5: 173 58% 39%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors - keeping defaults or slightly adjusted */
+    --sidebar-background: 204 16% 96%; /* Lighter Gray */
+    --sidebar-foreground: 222.2 47.4% 11.2%;
+    --sidebar-primary: 207 68% 53%; /* Blue */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 145 63% 49%; /* Green */
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 204 16% 88%;
+    --sidebar-ring: 207 68% 53%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%; /* Dark background */
+    --foreground: 0 0% 98%; /* Light text */
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 207 68% 53%; /* Blue */
+    --primary-foreground: 0 0% 98%; /* Light text on blue */
+
+    --secondary: 217.2 32.6% 17.5%; /* Dark Gray */
+    --secondary-foreground: 0 0% 98%; /* Light text on dark gray */
+
+    --muted: 217.2 32.6% 17.5%; /* Dark Gray */
+    --muted-foreground: 215 20.2% 65.1%; /* Lighter gray text */
+
+    --accent: 145 63% 49%; /* Green */
+    --accent-foreground: 0 0% 98%; /* Light text on green */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217.2 32.6% 17.5%; /* Dark Gray border */
+    --input: 217.2 32.6% 17.5%; /* Dark Gray input border */
+    --ring: 207 68% 53%; /* Blue focus ring */
+
+    --chart-1: 207 68% 53%; /* Blue */
+    --chart-2: 145 63% 49%; /* Green */
+    --chart-3: 43 74% 66%;
+    --chart-4: 27 87% 67%;
+    --chart-5: 173 58% 39%;
+
+    /* Sidebar specific colors - dark theme */
+    --sidebar-background: 222.2 84% 4.9%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 207 68% 53%; /* Blue */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 145 63% 49%; /* Green */
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 207 68% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
